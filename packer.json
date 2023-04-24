@@ -12,22 +12,7 @@
       "ssh_username": "ubuntu",
       "ami_name": "redash-{{user `image_version`}}-us-east-1"
     },
-    {
-      "type": "googlecompute",
-      "project_id": "redash-bird-123",
-      "source_image_family": "ubuntu-1804-lts",
-      "zone": "us-central1-a",
-      "ssh_username": "arik"
-    },
-    {
-      "type": "digitalocean",
-      "image": "ubuntu-18-04-x64",
-      "region": "nyc3",
-      "size": "1gb",
-      "ssh_username": "root",
-      "snapshot_name": "redash-{{user `image_version`}}-{{timestamp}}"
-    }
-  ],
+  ]
   "provisioners": [
     {
       "type": "shell",
