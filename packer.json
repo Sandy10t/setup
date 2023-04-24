@@ -4,13 +4,13 @@
   },
   "builders": [
     {
-      "name": "redash-us-east-1",
+      "name": "redash-ap-south-1",
       "type": "amazon-ebs",
       "region": "us-east-1",
       "source_ami": "ami-0ac019f4fcb7cb7e6",
       "instance_type": "t2.micro",
       "ssh_username": "ubuntu",
-      "ami_name": "redash-{{user `image_version`}}-us-east-1"
+      "ami_name": "redash-{{user `image_version`}}-ap-south-1"
     },
   ]
   "provisioners": [
