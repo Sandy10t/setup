@@ -10,7 +10,7 @@ blocks:
     task:
       env_vars:
         - name: AWS_DEFAULT_REGION
-          value: "us-east-1"
+          value: "ap-south-1"
       prologue:
         commands:
           - checkout
@@ -20,7 +20,7 @@ blocks:
       jobs:
       - name: Build AWS Image
         commands:
-          - ./packer build -var "redash_version=5.0.2-$SEMAPHORE_JOB_ID" -var "image_version=5_0_2-$SEMAPHORE_JOB_ID" --only=redash-us-east-1 packer.json
+          - ./packer build -var "redash_version=5.0.2-$SEMAPHORE_JOB_ID" -var "image_version=5_0_2-$SEMAPHORE_JOB_ID" --only=redash-ap-south-1 packer.json
       - name: Build GCE Image
         commands:
           - ./packer build -var "redash_version=5.0.2-$SEMAPHORE_JOB_ID" -var "image_version=5_0_2-$SEMAPHORE_JOB_ID" --only=googlecompute packer.json
