@@ -3,6 +3,7 @@
 set -eu
 
 REDASH_BASE_PATH=/opt/redash
+PASSWORD=
 
 install_docker(){
     # Install Docker
@@ -70,6 +71,9 @@ setup_compose() {
 }
 
 install_docker
+echo "--------------------- installed docker --------------------------"
 create_directories
+echo "-------------------- created directories ------------------------"
 create_config
-setup_compose
+echo "-------------------- created config -----------------------------"
+# setup_compose
