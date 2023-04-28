@@ -42,8 +42,8 @@ create_config() {
 
     COOKIE_SECRET=$(pwgen -1s 32)
     SECRET_KEY=$(pwgen -1s 32)
-    POSTGRES_PASSWORD=$(2sCEy0HYvrgY5QDCmUtYtHJJlEJA9dP0)
-    REDASH_DATABASE_URL="postgresql://postgres:2sCEy0HYvrgY5QDCmUtYtHJJlEJA9dP0@postgres:5001/postgres"
+    POSTGRES_PASSWORD=$(pwgen -1s 32)
+    REDASH_DATABASE_URL="postgresql://postgres:${POSTGRES_PASSWORD}@postgres/postgres"
 
     echo "PYTHONUNBUFFERED=0" >> $REDASH_BASE_PATH/env
     echo "REDASH_LOG_LEVEL=INFO" >> $REDASH_BASE_PATH/env
